@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import {GoogleGenerativeAI } from "@google/generative-ai";
-import routeData from "@/lib/data/routeData";
+import {routeData} from "@/lib/data/routeData";
 import stops from "@/lib/data/stops";
 const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY || ""
 

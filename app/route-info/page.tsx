@@ -1,17 +1,8 @@
 'use client';
 
-import routeData from "@/lib/data/routeData";
+import {routeData, BusRoute} from "@/lib/data/routeData";
 import { useState } from "react";
 
-type BusRoute = {
-  route_no: string;
-  from: string;
-  to: string;
-  stops: string[];
-  start_time: string;
-  end_time: string;
-  frequency: string;
-};
 
 const RouteInfo = () => {
   const [routeNo, setRouteNo] = useState<string>("");
@@ -42,7 +33,7 @@ const RouteInfo = () => {
             onChange={(e) => setRouteNo(e.target.value)}
             className="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
           >
-            <option value="">-- SELECT ROUTE NO --</option>
+            <option disabled value="">-- SELECT ROUTE NO --</option>
             {routeData.routes.map((route) => (
               <option key={route.route_no} value={route.route_no}>
                 {route.route_no}: {route.from} to {route.to}

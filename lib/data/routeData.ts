@@ -1,3 +1,13 @@
+export type BusRoute = {
+  route_no: string;
+  from: string;
+  to: string;
+  stops: string[];
+  start_time: string;
+  end_time: string;
+  frequency: string;
+};
+
 const routeData = {
     "routes": [
       {
@@ -91,7 +101,7 @@ const routeData = {
         "frequency": "15 mins"
       }
     ]
-  }
+  };
 
-export default routeData
+export {routeData};
   

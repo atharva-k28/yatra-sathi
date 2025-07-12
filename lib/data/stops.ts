@@ -6,7 +6,6 @@ const stops = [
     "Bharati Vidyapeeth",
     "Bopodi",
     "Bund Garden",
-    "Camp",
     "Deccan",
     "Fatima Nagar",
     "FC Road",
