@@ -9,7 +9,7 @@ const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY || ""
 const Home = () => {
   const [start,setStart] = useState<string>("")
   const [destination,setDestination] = useState<string>("")
-  const [loading,SetLoading] = useState<boolean>(false)
+  const [loading,setLoading] = useState<boolean>(false)
   const [response, setResponse] = useState<string>("")
 
   const findRoute = async() =>{
@@ -35,13 +35,14 @@ How can I go from ${start} to ${destination}?
 
 Note: The response will be shown directly inside a <pre> tag on a webpage. Do not use markdown syntax like **bold** or *italic*. Instead, use clear text formatting with line breaks and Use emojis like 🚌, 📍, 🔁, and ✅ for better readability, since this output is shown inside a <pre> tag..`
     try{
-    SetLoading(true)
+    setLoading(true)
+    setResponse("")
     const genai = new GoogleGenerativeAI(GEMINI_API_KEY)
     const model = genai.getGenerativeModel({model:"gemini-2.5-flash"})
     const response = await model.generateContent(prompt)
     console.log(JSON.stringify(response))
     const text = response?.response?.candidates?.[0]?.content?.parts?.[0]?.text;
-    SetLoading(false)
+    setLoading(false)
     if(text){
       setResponse(text)
     }
