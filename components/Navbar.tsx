@@ -14,15 +14,19 @@ const Navbar = () => {
 
   return (
     <header className="bg-white shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between space-y-2 sm:space-y-0">
-        <Link
-          href="/"
-          className="text-2xl font-bold text-indigo-700 hover:text-indigo-800 transition text-center sm:text-left"
-        >
-          Yatra Sathi
-        </Link>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        {/* Brand */}
+        <div className="text-center sm:text-left mb-2 sm:mb-0">
+          <Link
+            href="/"
+            className="text-2xl font-bold text-indigo-700 hover:text-indigo-800 transition"
+          >
+            Yatra Sathi
+          </Link>
+        </div>
 
-        <nav className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-sm font-medium text-center space-y-2 sm:space-y-0">
+        {/* Nav Links */}
+        <nav className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-sm font-medium text-center gap-1 sm:gap-0">
           {navItems.map(({ name, href }) => (
             <Link
               key={href}
