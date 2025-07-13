@@ -56,18 +56,16 @@ const StopInfo = () => {
             </h2>
             <div className="space-y-6">
               {matchingRoutes.map((routeInfo) => (
-                <div
-                  key={routeInfo.route_no}
-                  className="border border-gray-200 rounded-md p-4 bg-gray-100"
-                >
-                  <p><span className="font-semibold">Route No:</span> {routeInfo.route_no}</p>
-                  <p><span className="font-semibold">From:</span> {routeInfo.from}</p>
-                  <p><span className="font-semibold">To:</span> {routeInfo.to}</p>
-                  <p><span className="font-semibold">Stops:</span> {routeInfo.stops.join(", ")}</p>
-                  <p><span className="font-semibold">Start Time:</span> {routeInfo.start_time}</p>
-                  <p><span className="font-semibold">End Time:</span> {routeInfo.end_time}</p>
-                  <p><span className="font-semibold">Frequency:</span> {routeInfo.frequency}</p>
-                </div>
+                <div className="border border-gray-200 rounded-md p-4 bg-gray-100 space-y-2 text-sm text-gray-800">
+  <p><span className="font-semibold">Route No:</span> {routeInfo.route_no}</p>
+  <p><span className="font-semibold">From:</span> {routeInfo.from}</p>
+  <p><span className="font-semibold">To:</span> {routeInfo.to}</p>
+  <p><span className="font-semibold">Stops:</span> {routeInfo.stops.join(", ")}</p>
+  <p><span className="font-semibold">Start Time:</span> {routeInfo.start_time}</p>
+  <p><span className="font-semibold">End Time:</span> {routeInfo.end_time}</p>
+  <p><span className="font-semibold">Frequency:</span> {routeInfo.frequency}</p>
+</div>
+
               ))}
             </div>
           </div>

@@ -50,20 +50,21 @@ const RouteInfo = () => {
         </div>
 
         {routeInfo && (
-          <div className="border-t pt-4 mt-6">
-            <h2 className="text-lg font-semibold text-gray-800 mb-2">
-              Route Details
-            </h2>
-            <div className="space-y-2 text-sm text-gray-700">
-              <p><span className="font-medium">Route No:</span> {routeInfo.route_no}</p>
-              <p><span className="font-medium">From:</span> {routeInfo.from}</p>
-              <p><span className="font-medium">To:</span> {routeInfo.to}</p>
-              <p><span className="font-medium">Stops:</span> {routeInfo.stops.join(", ")}</p>
-              <p><span className="font-medium">Start Time:</span> {routeInfo.start_time}</p>
-              <p><span className="font-medium">End Time:</span> {routeInfo.end_time}</p>
-              <p><span className="font-medium">Frequency:</span> {routeInfo.frequency}</p>
-            </div>
+          <div className="border border-gray-200 rounded-md p-4 bg-gray-100 mt-6">
+          <h2 className="text-lg font-semibold text-gray-800 mb-4">
+            Route Details
+          </h2>
+          <div className="space-y-2 text-sm text-gray-800">
+            <p><span className="font-semibold">Route No:</span> {routeInfo.route_no}</p>
+            <p><span className="font-semibold">From:</span> {routeInfo.from}</p>
+            <p><span className="font-semibold">To:</span> {routeInfo.to}</p>
+            <p><span className="font-semibold">Stops:</span> {routeInfo.stops.join(", ")}</p>
+            <p><span className="font-semibold">Start Time:</span> {routeInfo.start_time}</p>
+            <p><span className="font-semibold">End Time:</span> {routeInfo.end_time}</p>
+            <p><span className="font-semibold">Frequency:</span> {routeInfo.frequency}</p>
           </div>
+        </div>
+        
         )}
       </div>
     </div>
